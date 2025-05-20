@@ -25,19 +25,19 @@
     <div class="container nav">
       <h1>CouchForge</h1>
       <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a id="about" href="#about">About</a>
+        <a id="services" href="#services">Services</a>
 
         <div class="dropdown">
           <button class="dropbtn">Products</button>
           <div class="dropdown-content">
             <a href="#audify">Audify</a>
             <a href="#fileapi">FileAPI</a>
-            <a href="#printserver">PrintStream</a>
+            <a href="#printserver">AirPrint</a>
           </div>
         </div>
 
-        <a href="#contact">Contact</a>
+        <a id="contact" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -110,7 +110,6 @@
   </button>
 
   <script>
-    
   // Scroll reveal animation
   const reveals = document.querySelectorAll(".reveal");
   const options = { threshold: 0.1 };
@@ -191,7 +190,6 @@
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
-    
 </script>
 
 </body>
