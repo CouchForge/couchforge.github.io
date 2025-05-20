@@ -137,7 +137,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: url('background.jpg') center/cover no-repeat;
+  background: url('assets/images/background.jpg') center/cover no-repeat;
   color: white; /* Make text visible over image */
   position: relative;
   z-index: 1;
