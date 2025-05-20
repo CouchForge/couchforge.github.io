@@ -70,7 +70,7 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: url('https://github.com/CouchForge/couchforge.github.io/blob/main/background.jpg') center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/CouchForge/couchforge.github.io/main/background.jpg') center/cover no-repeat;
   color: white; /* Make text visible over image */
   position: relative;
   z-index: 1;
