@@ -137,12 +137,12 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: url('assets/images/background.jpg') center/cover no-repeat;
+  background: url('background.jpg') center/cover no-repeat;
   color: white; /* Make text visible over image */
   position: relative;
   z-index: 1;
   max-width:100%;
-  sheight:auto;
+  height:auto;
 }
 
 .hero::before {
@@ -262,7 +262,6 @@ footer {
 
 /* Dropdown Menu */
 .dropdown {
-  position: relative;
   display: inline-block;
 }
 
@@ -351,6 +350,66 @@ footer {
   nav a:hover {
     color: #111827;
   }
+
+  .dropdown {
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  .dropbtn {
+    background: none;
+    margin-left: 0;
+    margin-right: 1.5rem;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #6b7280;
+    font-weight: 500;
+    cursor: pointer;  
+    transition: color 0.3s ease;
+  }
+
+  .dropbtn:hover {
+    color: #111827;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 125px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    border-radius: 8px;
+  }
+
+  .dropdown-content a {
+    color: #374151;
+    padding: 0;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    display: block;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+  }
+
+  /*.dropdown-content a:hover {
+    background-color: #f3f4f6;
+  }
+  */
+
+  .dropdown-content a:hover {
+    transition: all 0.3s ease;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+
+  }
+
 } 
 
 @keyframes fadeIn {
