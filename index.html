@@ -16,6 +16,11 @@
 
 <body>
 
+  <div id="splash-screen">
+    <h1>CouchForge</h1>
+    <div class="loading-line"></div>
+  </div>
+
   <header class="fade-in">
     <div class="container nav">
       <h1>CouchForge</h1>
@@ -105,6 +110,7 @@
   </button>
 
   <script>
+    
   // Scroll reveal animation
   const reveals = document.querySelectorAll(".reveal");
   const options = { threshold: 0.1 };
@@ -157,10 +163,35 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  window.addEventListener('load', () => {
+    const splash = document.getElementById('splash-screen');
+
+    const minDisplayTime = 2000;
+    const startTime = Date.now();
+
+    const hideSplash = () => {
+      splash.style.opacity = '0';
+      splash.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 500);
+    };
+
+    const elapsed = Date.now() - startTime;
+
+    if (elapsed >= minDisplayTime) {
+      hideSplash();
+    } else {
+      setTimeout(hideSplash, minDisplayTime - elapsed);
+    }
+  });
+
+
   // Reset scroll to top on reload
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
+    
 </script>
 
 </body>
